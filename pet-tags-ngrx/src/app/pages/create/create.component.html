@@ -1,0 +1,45 @@
+<!-- src/app/pages/create/create.component.html -->
+<p class="col-sm-12 text-center lead">
+  Hello! Create a customized tag for your pet.<br>hello!为你的宠物自定义一个标签。
+</p>
+
+<app-tag-shape
+  (selectShapeEvent)="selectShapeHandler($event)"></app-tag-shape>
+
+<app-tag-text
+  *ngIf="petTag.shape"
+  (selectFontEvent)="selectFontHandler($event)"
+  (addTextEvent)="addTextHandler($event)"></app-tag-text>
+
+<app-tag-extras
+  *ngIf="petTag.shape"
+  (toggleClipEvent)="toggleClipHandler()"
+  (toggleGemsEvent)="toggleGemsHandler()"></app-tag-extras>
+
+<br>
+<br>
+<br>
+
+<app-tag-preview
+  [petTag]="petTag"></app-tag-preview>
+
+<br>
+<br>
+
+<div class="row">
+  <div class="col-sm-12 text-center">
+    <p class="form-text text-muted" *ngIf="petTag.shape">
+      Preview your customized tag above.-预览上面定制的标签。<br>
+      If you're happy with the results,-如果你喜欢这个结果<br>
+      click the button below to finish!-点击下面的完成按钮！
+    </p>
+    <p>
+      <button
+        class="btn btn-success btn-lg"
+        *ngIf="petTag.shape"
+        [disabled]="!done"
+        (click)="submit()"
+        routerLink="/complete">Done-完成</button>
+    </p>
+  </div>
+</div>

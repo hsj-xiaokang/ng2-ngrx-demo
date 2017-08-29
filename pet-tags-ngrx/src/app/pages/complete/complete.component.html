@@ -1,0 +1,15 @@
+<!-- src/app/pages/complete/complete.component.html -->
+<div *ngIf="petTag.complete">
+  <div class="row">
+    <p class="col-sm-12 alert alert-success">
+      <strong>Congratulations!-恭喜！</strong> You've completed a pet ID tag for-你已经完成一个宠物ID关于&nbsp;&nbsp; <strong>{{petTag.text}}</strong>. Would you like to -你是否喜欢去<a (click)="newTag()" routerLink="/create" class="alert-link">create another-创建另外一个?</a>
+    </p>
+  </div>
+  <app-tag-preview [petTag]="petTag"></app-tag-preview>
+</div>
+
+<div *ngIf="!petTag.complete" class="row">
+  <p class="col-sm-12 alert alert-danger">
+    <strong>Oops!-sorry!</strong> You haven't customized a tag yet.-你至今没有创建一个宠物标签 <a routerLink="/create" class="alert-link">Click here to create one now.-现在点击这里去创建一个吧！</a>
+  </p>
+</div>
