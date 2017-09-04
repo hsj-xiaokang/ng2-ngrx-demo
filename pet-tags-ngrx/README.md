@@ -44,3 +44,14 @@ orignal author-原始作者 ->https://auth0.com/blog/managing-state-in-angular-w
 npm install
 npm start
 更多使用参见angular中文网站：https://www.angular.cn/
+
+
+
+
+##########使用jQuery##########
+http://blog.csdn.net/qq_38321709/article/details/70174426
+
+
+
+##################压缩打包#############
+ng build

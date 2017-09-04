@@ -2,21 +2,12 @@
  * Created by hsj on 2017/8/29  0029.
  */
 import { Component, OnInit } from '@angular/core';
-// import {greet, render} from './home.component.d';
+import * as $ from 'jquery';
 
 function createGreeting() {
   console.log('测试一下JavaScript方式，因为说是超集。function--->createGreeting');
 }
-// greet(function () {
-//   return {
-//     greeting: 'string',
-//     duration: 123456,
-//     color: 'string'
-//   };
-// });
-// render(function () {
-//   alert('finish.');
-// });
+
 
 @Component({
   selector: 'app-home',
@@ -29,10 +20,16 @@ export class HomeComponent implements OnInit {
   j : 'j'
  };
   public foo: Number = 123456;
+  public title = 'Tour of Heroes';
+  public myHero = 'Windstorm';
+  public heroes = ['Windstorm', 'Bombasto', 'Magneta', 'Tornado'];
   ngOnInit() {
     createGreeting();
     console.log(this.obj);
     console.log(this.foo);
+    console.log($('#testjq'));
   }
+
+
 }
 

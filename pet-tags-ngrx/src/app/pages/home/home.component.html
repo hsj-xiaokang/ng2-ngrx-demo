@@ -5,10 +5,52 @@
       Please sign up or log in to create a custom name tag for your beloved pet!<br>
       请注册或登录为您心爱的宠物创建一个自定义名称标签
     </p>
+      --------------------------------------------------------------------------------
+    <br>
+      {{title}}-{{myHero}}-{{1+1+100}}
+    <br>
+    <ul>
+      <li *ngFor="let hero of heroes">
+        {{ hero }}
+      </li>
+    </ul>
+      --------------------------------------------------------------------------------
     <p>
-      <button
+      <button id="testjq"
         class="btn btn-lg btn-primary"
         routerLink="/create">Log In<br>登录</button>
     </p>
+
+
+
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+      启动一个模态框在bootstrap.js
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">标题</h4>
+          </div>
+          <div class="modal-body">
+            内容...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal">保存</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
   </div>
 </div>
+<script>
+  $('#myModal').on('shown.bs.modal', function (e) {
+  })
+</script>
