@@ -17,6 +17,9 @@ import { TagTextComponent } from '../pages/create/tag-text/tag-text.component';
 import { TagExtrasComponent } from '../pages/create/tag-extras/tag-extras.component';
 import { TagPreviewComponent } from '../tag-preview/tag-preview.component';
 
+import { PaginationComponent } from './pagination.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +30,8 @@ import { TagPreviewComponent } from '../tag-preview/tag-preview.component';
     TagTextComponent,
     TagExtrasComponent,
     TagPreviewComponent,
-    CompleteComponent
+    CompleteComponent,
+    PaginationComponent
   ],
   imports: [
     BrowserModule,
