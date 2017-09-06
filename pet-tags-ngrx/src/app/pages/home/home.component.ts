@@ -3,7 +3,7 @@
  */
 import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
-import { PageState } from 'ng2-pagination-module/src/paging/pagination.component';
+import { PageState } from '../../core/pagination.component';
 
 function createGreeting() {
   console.log('测试一下JavaScript方式，因为说是超集。function--->createGreeting');
